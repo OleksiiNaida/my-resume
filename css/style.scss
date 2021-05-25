@@ -1,0 +1,317 @@
+@font-face {
+	font-family: RobotoSlab sans-serif;
+	src: url('../fonts/RobotoSlab-Regular.eot');
+	src: url('../fonts/RobotoSlab-Regular.woff') format('woff'), 
+   url('../fonts/RobotoSlab-Regular.ttf') format('truetype'), 
+   url('../fonts/RobotoSlab-Regular.svg') format('svg'),
+   url('../fonts/RobotoSlab-Regular.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: RobotoSlab sans-serif;
+	src: url('../fonts/Roboto Slab Bold.eot');
+	src: url('../fonts/Roboto Slab Bold.woff') format('woff'), 
+   url('../fonts/Roboto Slab Bold.ttf') format('truetype'),
+   url('../fonts/Roboto Slab Bold.svg') format('svg'),
+   url('../fonts/Roboto Slab Bold.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+body{
+   font-family: RobotoSlab;
+   font-weight: normal;
+   cursor: default;
+}
+
+img {
+   width: 100%;
+}
+
+.resume {
+   padding: 40px 20px;
+   &_position-center{
+      margin: 0 auto;
+   }
+
+   &_back-color{
+      background-color: #f2f4f7;
+   }
+   &__photo {
+      padding-bottom: 60px;
+   }
+
+   &__content {
+      box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+      padding: 40px 90px;
+      &_backColor{
+         background-color: #fff;
+      }
+   }
+}
+
+.sidebar {
+   color: #fff;
+   background-color: #1e2939;
+   padding: 40px 0px;
+}
+
+.contacts {
+
+   &_padding{
+      padding-left: 40px;
+      padding-bottom: 55px;
+   }
+   &__title{
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 24px;
+      padding-bottom: 20px;
+      color: #ffffff;
+      margin: 0;
+   }
+   &__text {
+      font-weight: 700;
+      padding-right: 10px;
+   }
+
+   &__link {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #717882;
+      transition-duration: 0.3s;
+      transition-property: all;
+      &:hover{
+         color: #fff;
+      }
+   }
+}
+
+.techSkill {
+
+   &__list {
+      margin: 0;
+      padding-left: 20px;
+   }
+
+   &__item {
+      &::marker{
+         color: #ff6b08;
+         font-size: 1em;
+      }
+   }
+}
+
+.aboutMe {
+   &_padding{
+      padding-bottom: 65px;
+   }
+   &__profession {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      padding-bottom: 20px;
+      margin: 0;
+   }
+
+   &__name {
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 90px;
+      margin: 0;
+      padding-bottom: 24px;
+   }
+
+   &__description {
+      font-size: 14px;
+      line-height: 24px;
+      max-width: 415px;
+      margin: 0;
+   }
+   &__link{
+      text-decoration: none;
+      transition-duration: 0.3s;
+      transition-property: all;
+      &:hover{
+         color: #ff6b08;
+         opacity: 0.7;
+      }
+   }
+}
+
+.education {
+
+   &__title {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 24px;
+      padding-bottom: 10px;
+      margin: 0;
+   }
+
+   &__item {
+      padding-bottom: 30px;
+   }
+
+   &__universityName {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      color: #ff6b08;
+      margin: 0;
+      padding-bottom: 5px;
+   }
+
+   &__facultyName {
+      color: #000;
+      margin: 0;
+   }
+
+   &__studyingTime {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #a8a8a8;
+      margin: 0;
+   }
+}
+
+.divider {
+   color: #000000;
+   font-weight: 700;
+}
+
+.proects {
+   &_padding{
+      padding-bottom: 20px;
+   }
+   &__item {
+      padding-bottom: 30px;
+   }
+
+   &__title {
+      color: #000;
+   }
+
+   &__descriptions {
+      max-width: 100%;
+      width: 100%;
+      & a{
+         text-decoration: none;
+         transition-duration: 0.3s;
+         transition-property: all;
+         &:hover{
+            color: #ff6b08;
+            opacity: 0.7;
+         }
+      }
+   }
+}
+
+.certificates {
+
+   flex-wrap: wrap;
+
+   &__img{
+      height: 100%;
+   }
+
+   &__title{
+      text-align: center;
+      padding-bottom: 15px;
+   }
+
+   &_padding{
+      // padding-top: 30px;
+      padding: 15px 30px 0px;
+   }
+
+   &__item {
+      margin-bottom: 30px;
+      transition-duration: 0.8s;
+      transition-property: all;
+      &:nth-child(4){
+         height: 100%;
+      }
+      &:nth-child(5){
+         display: flex;   
+         align-items: center; 
+      }
+      &:hover{
+         transform: scale(2.5);
+         z-index: 2;
+      }
+   }
+}
+
+
+
+/*Медиа запросы*/
+
+@media all and (max-width:992px){
+
+}
+
+@media all and (max-width:768px){
+   .sidebar{
+      text-align: center;
+   }
+   .resume__content {
+      padding: 40px 40px;
+   }
+   .techSkill__list{
+      list-style: none;
+   }
+   .certificates__item{
+      margin-bottom: 5px;
+      &:nth-child(2n+1){
+         padding-right: 0px;
+      }
+   }
+   .certificates_padding{
+      padding: 5px 5px 0px 5px;
+   }
+}
+
+
+@media all and (max-width:576px){
+   .sidebar{
+      text-align: left;
+   }
+   .techSkill__list{
+      list-style: square;
+   }
+   .aboutMe__name{
+      font-size: 40px;
+      line-height: 20px;
+   }
+   .aboutMe_padding {
+      padding-bottom: 25px;
+   }
+   .resume__content {
+      padding: 40px 20px;
+   }
+}
+
+@media all and (max-width:320px){
+   .sidebar{
+      padding: 0px;
+   }
+   .resume {
+      padding: 0px;
+   }
+   .resume__content {
+      padding: 10px 15px;
+   }
+   .aboutMe__name{
+      font-size: 20px;
+      line-height: 10px;
+   }
+   .row {
+      --bs-gutter-x: 0;
+   }
+}
