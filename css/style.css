@@ -328,6 +328,13 @@ img {
   .resume__content {
     padding: 0px 10px;
   }
+  .certificates__item:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .certificates__item:nth-child(2n+1) {
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+  }
 }
 
 @media all and (max-width: 320px) {
@@ -343,10 +350,6 @@ img {
   }
   .row {
     --bs-gutter-x: 0;
-  }
-  .certificates__item:hover {
-    -webkit-transform: none;
-            transform: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
