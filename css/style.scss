@@ -253,15 +253,32 @@ img {
 /*Медиа запросы*/
 
 @media all and (max-width:992px){
-
+   .resume {
+      padding: 20px 10px;
+   }
+   .certificates__item{
+      &:hover{
+         transform: scale(1.8);
+      }
+   }
+   .sidebar{
+      padding: 0px;
+   }
 }
 
 @media all and (max-width:768px){
    .sidebar{
       text-align: center;
    }
+   .aboutMe__profession{
+      padding-bottom: 0;
+      padding-top: 20px;
+   }
+   .resume {
+      padding: 0px;
+   }
    .resume__content {
-      padding: 40px 40px;
+      padding: 0px 20px;
    }
    .techSkill__list{
       list-style: none;
@@ -270,6 +287,19 @@ img {
       margin-bottom: 5px;
       &:nth-child(2n+1){
          padding-right: 0px;
+      }
+      &:nth-child(2) img{
+         height: 100%;
+      }
+      &:nth-child(4){
+         height: auto;
+         & img{
+            min-width: 100%;
+            min-height: 100%;
+         }
+      }
+      &:hover{
+         transform: scale(1.5);
       }
    }
    .certificates_padding{
@@ -287,21 +317,18 @@ img {
    }
    .aboutMe__name{
       font-size: 40px;
-      line-height: 20px;
+      line-height: 40px;
    }
    .aboutMe_padding {
       padding-bottom: 25px;
    }
    .resume__content {
-      padding: 40px 20px;
+      padding: 0px 10px;
    }
 }
 
 @media all and (max-width:320px){
    .sidebar{
-      padding: 0px;
-   }
-   .resume {
       padding: 0px;
    }
    .resume__content {
@@ -313,5 +340,10 @@ img {
    }
    .row {
       --bs-gutter-x: 0;
+   }
+   .certificates__item{
+      &:hover{
+         transform: scale(1.2);
+      }
    }
 }
