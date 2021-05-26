@@ -345,8 +345,8 @@ img {
     --bs-gutter-x: 0;
   }
   .certificates__item:hover {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: none;
+            transform: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
