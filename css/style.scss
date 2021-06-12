@@ -195,6 +195,21 @@ img {
 
    &__title {
       color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      margin: 0;
+      padding-bottom: 5px;
+   }
+
+   &__link{
+      text-decoration: none;
+      transition-duration: 0.3s;
+      transition-property: all;
+      &:hover{
+         color: #ff6b08;
+         opacity: 0.7;
+      }
    }
 
    &__descriptions {
@@ -213,8 +228,70 @@ img {
 }
 
 .certificates {
-
-   flex-wrap: wrap;
+   .slick-arrow{
+      width: 30px;
+      height: 30px;
+      background: #ff6b08;
+      opacity: 0.6;
+      cursor: pointer;
+      font-size: 0;
+      border: 0;
+      outline: 0;
+      transition-property: all;
+      transition-duration: 0.3s;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-11px);
+      z-index: 9;
+      &::after{
+         content: "";
+         width: 20px;
+         height: 20px;
+         background: url('../img/white-arrow-left.png') center no-repeat;
+         background-size: contain;
+         position: absolute;
+         left: 5px;
+         top: 5px;
+      }
+      &:hover{
+         opacity: 1;
+      }
+   }
+   .slick-prev{
+      left: -30px;
+   }
+   .slick-next{
+      right: -30px;
+      &::after{
+         transform: scaleX(-1);
+      }
+   }
+   
+   .slick-dots{
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: -50px;
+   display: flex;
+   list-style: none;
+   justify-content: center;
+   align-items: center;
+   & li{
+      margin: 10px;
+      &.slick-active button{
+         background-color: #ff6b08;
+      }
+   }
+   & button{
+      font-size: 0;
+      width: 5px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #aaa;
+      border: 0;
+      outline: none;
+   }
+}
 
    &__img{
       height: 100%;
@@ -231,20 +308,20 @@ img {
    }
 
    &__item {
-      margin-bottom: 30px;
+      // margin: 10px;
       transition-duration: 0.8s;
       transition-property: all;
       &:nth-child(4){
          height: 100%;
       }
-      &:nth-child(5){
-         display: flex;   
-         align-items: center; 
-      }
-      &:hover{
-         transform: scale(2.5);
-         z-index: 2;
-      }
+      // &:nth-child(5){
+      //    display: flex;   
+      //    align-items: center; 
+      // }
+      // &:hover{
+      //    transform: scale(1.2);
+      //    z-index: 2;
+      // }
    }
 }
 
@@ -252,21 +329,27 @@ img {
 
 /*Медиа запросы*/
 
-@media all and (max-width:992px){
+@media all and (max-width:991.98px){
+   .row {
+   --bs-gutter-x: 0rem;
+   }
    .resume {
-      padding: 20px 10px;
+      padding: 20px 0px;
    }
    .certificates__item{
       &:hover{
          transform: scale(1.8);
       }
    }
+   .contacts_padding {
+      padding-left: 90px;
+   }
    .sidebar{
       padding: 0px;
    }
 }
 
-@media all and (max-width:768px){
+@media all and (max-width:767.98px){
    .sidebar{
       text-align: center;
    }
@@ -274,14 +357,34 @@ img {
       padding-bottom: 0;
       padding-top: 20px;
    }
-   .resume {
-      padding: 0px;
-   }
+   // .resume {
+   //    padding: 0px;
+   // }
    .resume__content {
-      padding: 0px 20px;
+      padding: 0px 10px 40px 10px;
    }
    .techSkill__list{
       list-style: none;
+      padding-left: 0px;
+   }
+   .contacts_padding {
+      padding-left: 0px;
+   }
+   .certificates {
+      // .slick-arrow{
+      //    width: 20px;
+      //    height: 40px;
+      //    &::after{
+      //       left: 0px;
+      //       top: 10px;
+      //    }
+      // }
+      .slick-prev {
+         left: 0px;
+      }
+      .slick-next {
+         right: 0px;
+      }
    }
    .certificates__item{
       margin-bottom: 5px;
@@ -308,7 +411,7 @@ img {
 }
 
 
-@media all and (max-width:576px){
+@media all and (max-width:575.98px){
    .sidebar{
       text-align: left;
    }
@@ -322,16 +425,25 @@ img {
    .aboutMe_padding {
       padding-bottom: 25px;
    }
+   .contacts_padding {
+      padding-left: 10px;
+   }
    .resume__content {
-      padding: 0px 10px;
+      padding: 0px 10px 40px 10px;
    }
    .certificates__item{
       &:hover{
          transform: none;
       }
-      &:nth-child(2n+1){
-         padding-right: calc(var(--bs-gutter-x)/ 2);
-      }
+      // &:nth-child(2n+1){
+      //    padding-right: calc(var(--bs-gutter-x)/ 2);
+      // }
+   }
+}
+
+@media all and (max-width:412px){
+   .resume {
+      padding-top: 0px;
    }
 }
 
