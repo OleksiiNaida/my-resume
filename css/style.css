@@ -431,7 +431,7 @@ img {
     padding-left: 40px;
   }
   .certificates .slick-dots button {
-    width: 5px;
+    width: 15px;
   }
   .certificates__item:hover {
     -webkit-transform: none;
