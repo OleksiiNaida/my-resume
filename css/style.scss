@@ -284,7 +284,7 @@ img {
    }
    & button{
       font-size: 0;
-      width: 5px;
+      width: 10px;
       height: 10px;
       border-radius: 50%;
       background-color: #aaa;
@@ -335,6 +335,15 @@ img {
    }
    .resume {
       padding: 20px 0px;
+   }
+   .aboutMe_padding {
+      padding-left: 20px;
+   }
+   .education_padding{
+      padding-left: 20px;
+   }
+   .projects_padding{
+      padding-left: 20px;
    }
    .certificates__item{
       &:hover{
@@ -426,10 +435,15 @@ img {
       padding-bottom: 25px;
    }
    .contacts_padding {
-      padding-left: 10px;
+      padding-left: 40px;
    }
-   .resume__content {
-      padding: 0px 10px 40px 10px;
+   // .resume__content {
+   //    padding: 0px 10px 40px 50px;
+   // }
+   .certificates{
+      .slick-dots button {
+         width: 5px;
+      }
    }
    .certificates__item{
       &:hover{
