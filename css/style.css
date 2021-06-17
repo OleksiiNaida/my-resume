@@ -278,6 +278,7 @@ img {
 
 .certificates .slick-dots {
   position: absolute;
+  padding-left: 0px;
   left: 0;
   right: 0;
   bottom: -50px;
